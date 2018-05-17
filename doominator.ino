@@ -1,7 +1,7 @@
 //début
 #define trigPin 3
 #define echoPin 2
-#define buzzer 1
+
 #define trigPin2 6
 #define echoPin2 4
 int motor1_enablePin = 11; //pwm
@@ -28,7 +28,7 @@ void setup() {
   pinMode(echoPin, INPUT);
   pinMode(trigPin2, OUTPUT);
   pinMode(echoPin2, INPUT);
-  pinMode(buzzer, OUTPUT);
+  
   //on initialise les pins du moteur 1
   pinMode(motor1_in1Pin, OUTPUT);
   pinMode(motor1_in2Pin, OUTPUT);
@@ -67,8 +67,8 @@ void loop() {
     SetMotor1(90, false);
     SetMotor2(130, true);
   }
-  else if (distance < 45){ // Obstacle devant
-    if(distance2 < 45){ // Obstacle à coté
+  else if (distance < 20){ // Obstacle devant
+    if(distance2 < 20){ // Obstacle à coté
       SetMotor1(90, false);
       SetMotor2(130, false);
     }
@@ -121,26 +121,26 @@ void playDoom(){
   int counter = 0;
     while (counter != 3)
     {
-      tone(4,E4,E);
-      delay(1+Q);
-      tone(4,D4,E);
-      delay(1+Q);
-      tone(4,C4,E);
-      delay(1+Q);
-      tone(4,Bb3,E);
-      delay(1+Q);
-      tone(4,B3,E);
-      delay(1+S);
-      tone(4,C4,E);
-      delay(1+Q);
-      tone(4,E4,E);
-      delay(1+Q);
-      tone(4,D4,E);
-      delay(1+Q);
-      tone(4,C4,E);
-      delay(1+Q);
-      tone(4,Bb3,H);
-      delay(1+3*Q);
-      counter++;
+      //tone(4,E4,E);
+      //delay(1+Q);
+      //tone(4,D4,E);
+      //delay(1+Q);
+     // tone(4,C4,E);
+      //delay(1+Q);
+      //tone(4,Bb3,E);
+      //delay(1+Q);
+      //tone(4,B3,E);
+      //delay(1+S);
+      //tone(4,C4,E);
+     // delay(1+Q);
+      //tone(4,E4,E);
+     // delay(1+Q);
+     // tone(4,D4,E);
+     // delay(1+Q);
+     // tone(4,C4,E);
+     // delay(1+Q);
+     // tone(4,Bb3,H);
+     // delay(1+3*Q);
+     // counter++;
     }  
 }
