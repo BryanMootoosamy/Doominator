@@ -1,0 +1,4 @@
+{
+    "sketch": "doominator.ino",
+    "board": "arduino:avr:uno"
+}
